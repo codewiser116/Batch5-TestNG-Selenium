@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test">
+
+    <test name="Eat This Much main components">
+        <classes>
+            <class name="tests.HomePageTests">
+                <methods>
+                    <exclude name="test1"></exclude>
+                </methods>
+            </class>
+            <class name="tests.IntroToTestNGTests">
+                <methods>
+                    <exclude name="test2"></exclude>
+                </methods>
+            </class>
+            <class name="tests.BrowseFoodsTests">
+                <methods>
+                    <include name="drink"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

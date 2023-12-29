@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice">
+    <test name="PracticeTest" parallel="methods">
+        <parameter name="browser" value="firefox"></parameter>
+        <groups>
+            <run>
+                <exclude name="regression"></exclude>
+                <include name="smokeGroup"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.BrowseFoodsTests"></class>
+            <class name="tests.HomePageTests"></class>
+        </classes>
+    </test>
+</suite>
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="grouping">
+    <test name="SmokeTest" parallel="classes" thread-count="2">
+        <groups>
+            <run>
+                <include name="smokeTest"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.CommonTests"></class>
+            <class name="tests.SupportedDietsTests"></class>
+        </classes>
+    </test>
+    
+    <test name="RegressionTest">
+        <groups>
+            <run>
+                <include name="regressionTest"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.SupportedDietsTests"></class>
+            <class name="tests.CommonTests"></class>
+            <class name="tests.HomePageTests"></class>
+        </classes>
+    </test>
+</suite>
+
+

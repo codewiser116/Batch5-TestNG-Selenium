@@ -9,17 +9,17 @@ public class BrowseFoodsTests {
     ADD THIS CLASS IN SMOKE TEST XML FILE
      */
 
-    @Test
+    @Test(groups = {"smokeGroup", "regression"}, priority = 3)
     public void eat(){
         System.out.println("eating in browser foods");
     }
 
-    @Test
+    @Test (priority = 1)
     public void sleep(){
         System.out.println("sleeping in browse foods");
     }
 
-    @Test
+    @Test(groups = "smokeGroup", priority = 2)
     public  void drink(){
         System.out.println("drinking in browse foods");
     }
